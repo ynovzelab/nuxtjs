@@ -34,6 +34,13 @@ const submitLogin = () => {
     login(email.value, password.value);
     const result = login(email.value, password.value);
     console.log(result);
+    if (result) {
+        // Redirect to account page or home page after successful login
+        navigateTo('/account');
+    } else {
+        // Handle login failure (e.g., show an error message)
+        console.error('Login failed');
+    }
 }
 
 </script>
